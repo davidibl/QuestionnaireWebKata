@@ -1,0 +1,21 @@
+spring:
+  profiles:
+    active: production
+---
+
+spring:
+  profiles: development
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+server:
+  port: 9001
+---
+
+spring:
+  profiles: production
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+server:
+  port: 9002
